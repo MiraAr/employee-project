@@ -1,0 +1,10 @@
+package.json
+package-lock.json
+dist
+angular.json
+tsconfig.app.json
+tslint.json
+tsconfig.spec.json
+tsconfig.json
+karma.conf.js
+protractor.conf.js 

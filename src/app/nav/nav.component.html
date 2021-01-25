@@ -1,22 +1,30 @@
 <nav  class="navContainer">
   <ul class="navLinks">
     <li>
+      <fa-icon [icon]="dashboradIcon" class="navIcons"></fa-icon>
       <a class="button" routerLink="/dashboard" routerLinkActive="activebutton">
         Dashboard</a>
     </li>
     <li>
+      <fa-icon [icon]="parentIcon" class="navIcons"></fa-icon>
       <a class="button" routerLink="/parent" routerLinkActive="activebutton">Parent</a>
     </li>
     <li>
+      <fa-icon [icon]="teacherIcon" class="navIcons"></fa-icon>
       <a class="button" routerLink="/teacher" routerLinkActive="activebutton">Teacher</a>
     </li>
     <li>
+      <fa-icon [icon]="studentIcon" class="navIcons"></fa-icon>
       <a>Student</a>
     </li>
     <li>
+      <fa-icon [icon]="adminIcon" class="navIcons"></fa-icon>
       <a class="button" routerLink="/admin" routerLinkActive="activebutton">
         Admin</a>
     </li>
   </ul>
+
+  <fa-icon [icon]="logOutIcon" class="navIcons logOut"></fa-icon>
+
    
 </nav>

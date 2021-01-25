@@ -1,19 +1,24 @@
 .navContainer{
     display: block;
     right: 0;
-    margin: 0;
     padding: 0;
     overflow: hidden;
-
-}
-
-.navLinks{
     width: 100%;
     position : fixed;
     display: flex;
     background-color:#00968b;
     transition: 0.5s ease;
     list-style-type: none;
+    height: 70px;
+
+}
+
+.navLinks{
+    transition: 0.5s ease;
+    list-style-type: none;
+    vertical-align: top; 
+    margin-top: 5px;
+    margin-left: 20px;
 }
 
 .navLinks li{
@@ -21,17 +26,46 @@
     flex: 1;
     padding: 10px 5px;
     display: inline;
+    position: relative; 
+    margin-right: 40px;
    
 }
 
 .navLinks li:hover{
     background-color: #ef5e4a; 
-    bottom: 20%;
+    top: 20%;
+
+}
+
+.navLinks li:active{
+    background-color: #ef5e4a; 
+    top: 20%;
 
 }
 
 .navLinks li a{
     text-decoration: none;
     color: white;
+    vertical-align: top; 
+    display: inline-block;
+    margin-left: -40px;
+    margin-top: 40px;
 
+}
+
+.navIcons{
+    font-size: 2.5em;
+	left: 50%;
+    display: inline-block;
+	top: 20px; 
+    margin-left: -10px;
+    color: white;
+
+}
+
+.logOut{
+    padding: 10px 5px;
+    position :relative;
+    right:2px;
+   top:5px;
 }

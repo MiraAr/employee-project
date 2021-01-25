@@ -26,7 +26,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LogInComponent,
     NavComponent
   ],
-  imports: [BrowserModule, AppRoutingModule ,HttpClientModule ,HttpClientModule,
+  imports: [BrowserModule, AppRoutingModule , FontAwesomeModule ,HttpClientModule ,HttpClientModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.

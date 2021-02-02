@@ -1,1 +1,7 @@
-<p>teacher works!</p>
+<div>
+    <h2>Teachers</h2>
+    <app-table></app-table>
+    <button (click)="toggleAddForm()">Add +</button>
+    <app-add-form *ngIf="isViewable"></app-add-form>
+</div>
+

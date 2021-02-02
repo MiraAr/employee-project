@@ -5,10 +5,10 @@ import { ParentComponent } from './parent/parent.component';
 import { TeacherComponent } from './teacher/teacher.component';
 import { AdminComponent } from './admin/admin.component';
 import { ContactComponent } from './contact/contact.component';
-import { LogInComponent } from './log-in/log-in.component'
+import { LogInComponent } from './log-in/log-in.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/log-in', pathMatch: 'full'},
+  { path: '', redirectTo: '/log-in', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'parent', component: ParentComponent },
   { path: 'teacher', component: TeacherComponent },

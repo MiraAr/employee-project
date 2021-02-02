@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { faSignOutAlt, faTachometerAlt,faUserCog, faUserGraduate,faChalkboardTeacher,faUsers } from '@fortawesome/free-solid-svg-icons';
-
+import {
+  faSignOutAlt,
+  faTachometerAlt,
+  faUserCog,
+  faUserGraduate,
+  faChalkboardTeacher,
+  faUsers
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-nav',

@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,11 +11,13 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { AdminComponent } from './admin/admin.component';
 import { ContactComponent } from './contact/contact.component';
 import { LogInComponent } from './log-in/log-in.component';
-import { NavComponent } from './nav/nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TableComponent } from './table/table.component';
+import { AddFormComponent } from './add-form/add-form.component';
+import { NavComponent } from './nav/nav.component'
 
 @NgModule({
-  declarations: [
+	declarations: [
     AppComponent,
     DashboardComponent,
     ParentComponent,
@@ -24,17 +25,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AdminComponent,
     ContactComponent,
     LogInComponent,
+    TableComponent,
+    AddFormComponent,
     NavComponent
-  ],
-  imports: [BrowserModule, AppRoutingModule , FontAwesomeModule ,HttpClientModule ,HttpClientModule,
-
-    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-    // and returns simulated server responses.
-    // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )],
-  providers: [],
-  bootstrap: [AppComponent]
+	],
+	imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
+
 export class AppModule {}

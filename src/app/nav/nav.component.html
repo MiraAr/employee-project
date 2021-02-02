@@ -1,25 +1,25 @@
 <nav  class="navContainer">
   <ul class="navLinks">
-    <li>
+    <li routerLink="/dashboard" routerLinkActive="activebutton">
       <fa-icon [icon]="dashboradIcon" class="navIcons"></fa-icon>
-      <a class="button" routerLink="/dashboard" routerLinkActive="activebutton">
+      <a class="button">
         Dashboard</a>
     </li>
-    <li>
+    <li routerLink="/parent" routerLinkActive="activebutton">
       <fa-icon [icon]="parentIcon" class="navIcons"></fa-icon>
-      <a class="button" routerLink="/parent" routerLinkActive="activebutton">Parent</a>
+      <a class="button">Parent</a>
     </li>
-    <li>
+    <li routerLink="/teacher" routerLinkActive="activebutton">
       <fa-icon [icon]="teacherIcon" class="navIcons"></fa-icon>
-      <a class="button" routerLink="/teacher" routerLinkActive="activebutton">Teacher</a>
+      <a class="button">Teacher</a>
     </li>
     <li>
       <fa-icon [icon]="studentIcon" class="navIcons"></fa-icon>
       <a>Student</a>
     </li>
-    <li>
+    <li routerLink="/admin" routerLinkActive="activebutton">
       <fa-icon [icon]="adminIcon" class="navIcons"></fa-icon>
-      <a class="button" routerLink="/admin" routerLinkActive="activebutton">
+      <a class="button">
         Admin</a>
     </li>
   

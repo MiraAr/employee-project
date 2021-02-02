@@ -6,7 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teacher.component.css']
 })
 export class TeacherComponent implements OnInit {
+  public isViewable: boolean;
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isViewable = false;
+  }
+
+  public toggleAddForm(): void {
+    this.isViewable = !this.isViewable;
+  }
+
 }

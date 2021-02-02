@@ -1,0 +1,30 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th *ngIf = "currentRoute === 'admin'">User Name</th>
+            <th *ngIf = "currentRoute === 'teacher'">Class</th>
+            <th *ngIf = "currentRoute === 'teacher'">Material</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let person of data">
+            <td>{{ person.id }}</td>
+            <td>{{ person.firstName }}</td>
+            <td>{{ person.lastName }}</td>
+            <td>{{ person.phoneNumber }}</td>
+            <td>{{ person.email }}</td>
+            <td>{{ person.address }}</td>
+            <td *ngIf = "currentRoute === 'admin'">{{ person.userName }}</td>
+            <td *ngIf = "currentRoute === 'teacher'">{{ person.classes }}</td>
+            <td *ngIf = "currentRoute === 'teacher'">{{ person.material }}</td>
+            <td><button (click)="deletePerson(person.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

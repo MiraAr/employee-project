@@ -10,8 +10,6 @@ import { Person } from '../person';
 
 export class DataService {
   private baseUrl = 'http://localhost:8080/api/v1/';
-  private teachersQuery:string = 'teachers';
-  private adminQuery:string = 'admin';
 
   constructor(private httpClient: HttpClient) {}
 

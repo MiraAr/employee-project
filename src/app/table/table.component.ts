@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
+
 export class TableComponent implements OnInit {
   data : Person[];
   currentRoute:string = this.route.routeConfig.path;   
@@ -36,10 +37,5 @@ export class TableComponent implements OnInit {
   ngDoCheck(){
     console.log(typeof this.currentRoute)
   }
-
-  // ngDoCheck(){
-
-  //   console.log(this.data);
-  // }
 
 }

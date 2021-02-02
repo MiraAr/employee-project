@@ -25,11 +25,14 @@ export class AddFormComponent implements OnInit {
       data => { console.log(data) },
       error => console.log(error)
     )
-
   }
 
   formSubmit() {
     this.saveNewPerson()
     location.reload() 
+  }
+
+  cancelSubmission(){
+
   }
 }

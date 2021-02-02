@@ -1,1 +1,6 @@
-<p>parent works!</p>
+<div>
+    <h2>Parent</h2>
+    <app-table></app-table>
+    <button (click)="toggleAddForm()">Add +</button>
+    <app-add-form *ngIf="isViewable"></app-add-form>
+</div>

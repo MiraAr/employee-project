@@ -1,7 +1,8 @@
-<form (ngSubmit) = "formSubmit()">
+<form #myForm="ngForm" (ngSubmit) = "formSubmit(); myForm.reset()">
     <div>
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" [(ngModel)]="person.firstName">
+        
     </div>
     <div>
         <label for="lastName">Last Name</label>
@@ -11,7 +12,7 @@
         <label for="phoneNumber">Phone Number</label>
         <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="person.phoneNumber">
     </div>
-    <div>
+    <div *ngIf = "currentRoute === 'admin'|| currentRoute === 'teacher'">
         <label for="email">Email</label>
         <input type="text" id="email" name="email" [(ngModel)]="person.email">
     </div>
@@ -32,5 +33,5 @@
         <input type="text" id="userName" name="userName" [(ngModel)]="person.userName">
     </div>
     <button type="submit">Save</button>    
-    <button >X Cancel</button>
+    <button (click)="cancelSubmission()">X Cancel</button>
 </form>

@@ -37,9 +37,4 @@ export class TableComponent implements OnInit {
     } )
   }
 
-  
-  ngDoCheck(){
-    console.log(typeof this.currentRoute)
-  }
-
 }

@@ -1,6 +1,6 @@
 <nav  class="navContainer">
   <ul class="navLinks">
-    <li routerLink="/dashboard" routerLinkActive="activebutton">
+    <li routerLink="/dashboard">
       <fa-icon [icon]="dashboradIcon" class="navIcons"></fa-icon>
       <a class="button">
         Dashboard</a>
@@ -23,7 +23,7 @@
         Admin</a>
     </li>
   
-    <li class="logOut">
+    <li class="logOut" (click)="logOut()">
       <fa-icon [icon]="logOutIcon" class="navIcons"></fa-icon>
       <a>Log out</a>
     </li>

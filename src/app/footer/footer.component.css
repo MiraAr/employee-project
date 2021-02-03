@@ -1,0 +1,15 @@
+.footer{
+    color: white;
+    background-color:#00968b;
+    height: 70px;
+    position:fixed;
+ bottom:0;
+    clear: both;
+    width: 100%;
+
+}
+
+.footerContent{
+    margin-top: 5px;
+    text-align:center
+}

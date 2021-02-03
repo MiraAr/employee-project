@@ -14,7 +14,8 @@ import { LogInComponent } from './log-in/log-in.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TableComponent } from './table/table.component';
 import { AddFormComponent } from './add-form/add-form.component';
-import { NavComponent } from './nav/nav.component'
+import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
 	declarations: [
@@ -27,7 +28,8 @@ import { NavComponent } from './nav/nav.component'
     LogInComponent,
     TableComponent,
     AddFormComponent,
-    NavComponent
+    NavComponent,
+    FooterComponent
 	],
 	imports: [
     BrowserModule,

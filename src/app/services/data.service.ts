@@ -14,7 +14,6 @@ export class DataService {
   constructor(private httpClient: HttpClient) {}
 
   getDataList(query:string): Observable<Person[]> {
-    console.log(this.baseUrl + query)
     return this.httpClient.get<Person[]>(this.baseUrl + query);
   }
 

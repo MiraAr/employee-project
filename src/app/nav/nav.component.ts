@@ -7,6 +7,8 @@ import {
   faChalkboardTeacher,
   faUsers
 } from '@fortawesome/free-solid-svg-icons';
+import { AuthenticationService } from "../services/authentication.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -20,7 +22,13 @@ export class NavComponent implements OnInit {
   studentIcon = faUserGraduate;
   adminIcon = faUserCog;
   logOutIcon = faSignOutAlt;
-  constructor() {}
+  constructor( private loginservice: AuthenticationService, private router: Router) {}
 
   ngOnInit(): void {}
+
+  logOut(){
+    this.loginservice.logOut()
+    sessionStorage.clear()
+    this.router.navigate(['log-in']);  
+  }
 }

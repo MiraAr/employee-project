@@ -1,8 +1,7 @@
-<form #myForm="ngForm" (ngSubmit) = "formSubmit(); myForm.reset()">
+<form  (ngSubmit) = "formSubmit()">
     <div>
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" [(ngModel)]="person.firstName">
-        
     </div>
     <div>
         <label for="lastName">Last Name</label>
@@ -33,5 +32,5 @@
         <input type="text" id="userName" name="userName" [(ngModel)]="person.userName">
     </div>
     <button type="submit">Save</button>    
-    <button (click)="cancelSubmission()">X Cancel</button>
+    <button>X Cancel</button>
 </form>

@@ -24,7 +24,9 @@
             <td *ngIf = "currentRoute === 'admin'">{{ person.userName }}</td>
             <td *ngIf = "currentRoute === 'teacher'">{{ person.classes }}</td>
             <td *ngIf = "currentRoute === 'teacher'">{{ person.material }}</td>
-            <td><button (click)="deletePerson(person.id)">Delete</button></td>
+            <td><button (click)="deletePerson(person.id)" class="deleteBtn">
+                <fa-icon [icon]="trashIcon" class="trashIcon"></fa-icon>
+                Delete</button></td>
         </tr>
     </tbody>
 </table>

@@ -1,0 +1,20 @@
+.titleContainer{
+    margin-top: 2%;
+    margin-left: 1.5%;
+    border-left: 3px solid #ef5e4a;
+}
+
+.pageTitle{
+    color:#00968b;
+    margin-left: 1%;
+    
+}
+
+.addBtn{
+    color: white;
+    background-color:  #ef5e4a;
+    border: 0.5px solid #80cbc4;
+    margin-left: 1.5%;
+    margin-top: 10px;
+    padding: 5px 25px;
+}

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Person } from '../person';
 import { DataService } from '../services/data.service';
 import { ActivatedRoute } from '@angular/router';
+import {
+  faTrashAlt
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-table',
@@ -11,7 +14,8 @@ import { ActivatedRoute } from '@angular/router';
 
 export class TableComponent implements OnInit {
   data : Person[];
-  currentRoute:string = this.route.routeConfig.path;   
+  currentRoute:string = this.route.routeConfig.path;  
+  trashIcon =   faTrashAlt; 
   constructor(private dataService: DataService, private route: ActivatedRoute) {
     
   }

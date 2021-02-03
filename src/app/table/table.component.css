@@ -1,0 +1,31 @@
+table{
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 2%;
+    width: 97%;
+
+}
+
+table, th, td{
+    border: 2px solid #80cbc4;
+    border-collapse: collapse;
+    color: #076c5d;
+}
+
+th{
+    background-color: #b2dfdb; 
+}
+
+td{
+    padding: 1px 5px;
+}
+
+.deleteBtn{
+    background-color:#009688;
+    color: white;
+    border: none;
+    width: 80%;
+    padding: 6px 20px;
+    margin: 2% 10%;
+
+}

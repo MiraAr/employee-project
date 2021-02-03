@@ -1,6 +1,8 @@
 <div>
-<h2>Admin</h2>
+    <div class="titleContainer">
+        <h2 class="pageTitle">Admin</h2>
+    </div>
 <app-table></app-table>
-<button (click)="toggleAddForm()">Add +</button>
+<button (click)="toggleAddForm()" class="addBtn">Add +</button>
 <app-add-form *ngIf="isViewable"></app-add-form>
 </div>

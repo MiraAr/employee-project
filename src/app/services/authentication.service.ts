@@ -7,7 +7,7 @@ export class AuthenticationService {
 
   constructor() { }
 
-  authenticate(userName, password){
+  authenticate(userName, password): boolean{
     if(userName === 'mira' && password === '12345'){
       sessionStorage.setItem('userName',userName)
       return true;

@@ -32,7 +32,6 @@ export class TableComponent implements OnInit {
 
   deletePerson(id:number){
     this.dataService.deletePersonData(id,this.currentRoute).subscribe( data => {
-      console.log(data);
       this.getData();
     } )
   }

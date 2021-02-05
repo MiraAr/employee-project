@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
   public isViewable: boolean;
-  constructor() {}
+  constructor() {   
+  }
 
   ngOnInit(): void {
     this.isViewable = false;

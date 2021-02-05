@@ -13,6 +13,10 @@ import { ActivatedRoute } from '@angular/router';
 export class AddFormComponent implements OnInit {
   person: Person = new Person();
   currentRoute:string = this.route.routeConfig.path;
+  AdminSrcImage:string = "/assets/images/adminAddForm.png";
+  ParentSrcImage:string = "/assets/images/parentsAddForm.png";
+  TeacherSrcImage:string = "/assets/images/teacherAddForm.png";
+
 
   constructor(
     private dataService: DataService ,
@@ -34,4 +38,5 @@ export class AddFormComponent implements OnInit {
     this.saveNewPerson()
     location.reload() 
   }
+
 }

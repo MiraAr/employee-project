@@ -3,10 +3,9 @@
     background-color:#00968b;
     height: 70px;
     position:fixed;
- bottom:0;
+    bottom:0;
     clear: both;
     width: 100%;
-
 }
 
 .footerContent{

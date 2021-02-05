@@ -1,0 +1,62 @@
+.formContainer{
+    margin: 2% 2%;
+    text-align: center;
+    vertical-align: middle;
+    border:2px solid #f3f5f6;
+}
+
+.formContainer h4{
+    margin-top:-1%; 
+    margin-left: 2%;
+    background: white;
+    color: #ef5e4a;
+    width: fit-content;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.fromBody{
+    margin: 5% 5%;
+    display: grid;
+    grid-template-columns: auto 25%;
+
+}
+
+.inputsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBox input{
+    border:2px solid #f3f5f6;
+    width: 240px;
+    height: 25px;
+}
+
+.inputBox label{
+    color: #00968B;
+    font-size: 15px;
+    font-weight: bold;
+    align-self: start;
+}
+
+.formBtnContainer button{
+    background-color: #ef5e4a;
+    color: white;
+    border: none;
+    outline: none;
+    margin: 5px 5px;
+    width: 100px;
+    height: 25px;
+}
+
+.formBtnContainer{
+    margin-top: 3%;
+}

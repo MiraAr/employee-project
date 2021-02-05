@@ -1,36 +1,49 @@
-<form  (ngSubmit) = "formSubmit()">
-    <div>
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" [(ngModel)]="person.firstName">
+<div class="formContainer">
+    <h4>Add {{currentRoute}}</h4>
+<form (ngSubmit) = "formSubmit()" class="fromBody">
+    <div class="inputsContainer">
+        <div class="inputBox">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" [(ngModel)]="person.firstName" placeholder="First name">
+        </div>
+        <div class="inputBox">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="person.lastName" placeholder="Last name">
+        </div>
+        <div class="inputBox">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="person.phoneNumber" placeholder="Phone number">
+        </div>
+        <div *ngIf = "currentRoute === 'admin'|| currentRoute === 'teacher'" class="inputBox">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" [(ngModel)]="person.email" placeholder="Email">
+        </div>
+        <div class="inputBox">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" [(ngModel)]="person.address" placeholder="Address">
+        </div>
+        <div *ngIf = "currentRoute === 'teacher'" class="inputBox">
+            <label for="classes">Class:</label>
+            <input type="text" id="classes" name="classes" [(ngModel)]="person.classes" placeholder="Classes">
+        </div>
+        <div  *ngIf = "currentRoute === 'teacher'" class="inputBox">
+            <label for="material">Material:</label>
+            <input type="text" id="material" name="material" [(ngModel)]="person.material" placeholder="Material">
+        </div>
+        <div *ngIf = "currentRoute === 'admin'" class="inputBox">
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" name="userName" [(ngModel)]="person.userName" placeholder="User name">
+        </div>
     </div>
-    <div>
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" [(ngModel)]="person.lastName">
+    <div class="imgAndBtnsContainer">
+        <img [src]="currentRoute === 'admin' ? AdminSrcImage : currentRoute === 'teacher' ? TeacherSrcImage: ParentSrcImage">
+        <div class="formBtnContainer">
+            <button type="submit">Save</button>    
+            <button  >X Cancel</button>
+        </div>
+        
     </div>
-    <div>
-        <label for="phoneNumber">Phone Number</label>
-        <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="person.phoneNumber">
-    </div>
-    <div *ngIf = "currentRoute === 'admin'|| currentRoute === 'teacher'">
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" [(ngModel)]="person.email">
-    </div>
-    <div>
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" [(ngModel)]="person.address">
-    </div>
-    <div *ngIf = "currentRoute === 'teacher'">
-        <label for="classes">Class</label>
-        <input type="text" id="classes" name="classes" [(ngModel)]="person.classes">
-    </div>
-    <div  *ngIf = "currentRoute === 'teacher'" >
-        <label for="material">Material</label>
-        <input type="text" id="material" name="material" [(ngModel)]="person.material">
-    </div>
-    <div *ngIf = "currentRoute === 'admin'">
-        <label for="userName">User Name</label>
-        <input type="text" id="userName" name="userName" [(ngModel)]="person.userName">
-    </div>
-    <button type="submit">Save</button>    
-    <button>X Cancel</button>
+   
+ 
 </form>
+</div>

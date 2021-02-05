@@ -29,3 +29,6 @@ td{
     margin: 2% 10%;
 
 }
+.deleteBtn:hover{
+    background-color:#EF5E4A;
+}

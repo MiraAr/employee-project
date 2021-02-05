@@ -11,6 +11,7 @@ export class LogInComponent implements OnInit {
   username = '';
   password = '';
   invalidLogin = false;
+  LoginSrcImage:string = "/assets/images/logInForm.png";
 
   constructor(private loginservice: AuthenticationService, private router: Router) {}
   ngOnInit(): void {}

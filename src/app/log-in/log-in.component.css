@@ -1,0 +1,46 @@
+.formContainer{
+    text-align: center;
+    width: 700px;
+    margin-left: 20%;
+}
+
+.formContent{
+    border:2px solid #f3f5f6;
+    margin: 0 20%;
+    padding: 8% 0;
+    background-color: #fdfdfd;
+    color:#009688;
+}
+
+.formContent h4{
+    margin-bottom: 3%;
+    font-weight: 900;
+    
+}
+
+.formContent label{
+    display: block;
+    text-align: left;
+    margin-left: 20% ;
+    font-weight: bolder;
+}
+
+.formContent input{
+    border:2px solid #ececec;
+    outline: none;
+    width: 250px;
+    height: 25px;
+    margin: 2% 0;
+}
+
+.formContent button{
+    background-color:#ef5e4a;
+    color:white;
+    border: none;
+    width: 130px;
+    height: 30px;
+    margin-right: 30%;
+    margin-top: 3%;
+    
+}
+

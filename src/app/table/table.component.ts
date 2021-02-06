@@ -24,6 +24,7 @@ export class TableComponent implements OnInit {
     this.getData();
   }
 
+  //// send this up to a service and sent the data back ////
   getData() {
     this.dataService
       .getDataList(this.currentRoute)

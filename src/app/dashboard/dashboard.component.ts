@@ -8,5 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
   constructor() {}
 
+  public dashboardInfo= {
+    fullName: "test test",
+    email: "root@root.com",
+    phoneNumber: "9518476332",
+    address: "Amman"
+  }
   ngOnInit(): void {}
+ 
 }

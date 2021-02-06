@@ -1,0 +1,41 @@
+.titleContainer{
+    margin-top: 2%;
+    margin-left: 1.5%;
+    border-left: 3px solid #ef5e4a;
+}
+
+.pageTitle{
+    color:#00968b;
+    margin-left: 1%;    
+}
+
+.cardsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+}
+
+.card{
+    border: 2px solid #eceff1;
+    text-align: center;
+    border-top: 4px solid #ef5e4a;
+    margin: 0.5%;
+    padding: 1% 0;
+    min-width: 350px;
+    -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.57);
+    -moz-box-shadow:    4px 4px 9px 0px rgba(50, 50, 50, 0.57);
+    box-shadow:         4px 4px 9px 0px rgba(50, 50, 50, 0.57);
+}
+
+.cardContent{
+    border-top: 2px solid #eceff1;
+    padding-top: 1%;
+}
+
+.cardContent span{
+    color: #00968b;
+    font-weight: 700;
+    text-align: left !important;
+}

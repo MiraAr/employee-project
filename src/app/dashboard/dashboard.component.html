@@ -1,3 +1,39 @@
 <div> 
-   <a>dashboard works!</a>   
+   <div class="titleContainer">
+      <h2 class="pageTitle">Dashboard</h2>
+  </div>   
+  <div class="cardsContainer">
+     <div class="card">
+        <img src="../../assets/images/dashboard/1.png" alt="1">
+        <div class="cardContent">
+         <span>Full Name:</span>
+         {{ dashboardInfo.fullName }}
+        </div>
+     </div>
+
+     <div class="card">
+      <img src="../../assets/images/dashboard/2.png" alt="2">
+      <div class="cardContent">
+       <span>Email:</span>
+       {{ dashboardInfo.email }}
+      </div>
+      </div>
+
+      <div class="card">
+         <img src="../../assets/images/dashboard/3.png" alt="3">
+         <div class="cardContent">
+          <span>Phone Number:</span>
+          {{ dashboardInfo.phoneNumber }}
+         </div>
+      </div>
+
+      <div class="card">
+         <img src="../../assets/images/dashboard/4.png" alt="4">
+         <div class="cardContent">
+          <span>Address:</span>
+          {{ dashboardInfo.address }}
+         </div>
+      </div>
+
+  </div>
 </div>

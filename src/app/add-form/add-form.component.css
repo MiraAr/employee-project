@@ -60,3 +60,14 @@
 .formBtnContainer{
     margin-top: 3%;
 }
+
+@media screen and (max-width: 756px) {
+    .fromBody{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgAndBtnsContainer{
+        margin-top: 2%;
+    }
+  }

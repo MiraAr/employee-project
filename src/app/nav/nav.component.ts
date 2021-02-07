@@ -24,7 +24,14 @@ export class NavComponent implements OnInit {
   logOutIcon = faSignOutAlt;
   constructor( private loginservice: AuthenticationService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+   
+  }
+
+  ngDoCheck(){
+
+  }
+
 
   logOut(){
     this.loginservice.logOut()

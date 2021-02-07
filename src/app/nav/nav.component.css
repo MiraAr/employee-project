@@ -62,3 +62,25 @@
     float: right;
     margin-left: auto;
 }
+
+#hamburgerMenu{
+    font-size: 35px;
+    border: 1.5px solid white;
+    border-radius: 10%;
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navLinks li{
+        display: none;
+    }
+
+    #hamburgerMenu{
+        display: block;
+        float: right;
+        margin-left: auto;
+    }
+    
+  }
+  

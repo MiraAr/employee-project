@@ -1,9 +1,8 @@
 <div>
     <div class="titleContainer">
         <h2 class="pageTitle">Parent</h2>
-    </div>
-    
-    <app-table></app-table>
+    </div>    
+    <app-table [data]="data" (deletePersonEvent)="deletePerson($event)"></app-table>
     <button (click)="toggleAddForm()" class="addBtn"> + Add</button>
     <app-add-form *ngIf="isViewable"></app-add-form>
 </div>

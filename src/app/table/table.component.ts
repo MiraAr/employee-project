@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { Person } from '../person';
 import { DataService } from '../services/data.service';
 import { ActivatedRoute } from '@angular/router';
@@ -13,28 +13,24 @@ import {
 })
 
 export class TableComponent implements OnInit {
-  data : Person[];
+  @Input() data : Person[];
+  @Output() deletePersonEvent:EventEmitter<any> = new EventEmitter<any>();
   currentRoute:string = this.route.routeConfig.path;  
   trashIcon =   faTrashAlt; 
-  constructor(private dataService: DataService, private route: ActivatedRoute) {
-    
+  constructor( private route: ActivatedRoute) {
   }
   
-  ngOnInit(): void {
-    this.getData();
+  ngOnInit():void {
+  }
+  
+  deletePerson(id){
+    this.deletePersonEvent.emit(id)
   }
 
-  //// send this up to a service and sent the data back ////
-  getData() {
-    this.dataService
-      .getDataList(this.currentRoute)
-      .subscribe((data) => (this.data = data));
-  }
-
-  deletePerson(id:number){
-    this.dataService.deletePersonData(id,this.currentRoute).subscribe( data => {
-      this.getData();
-    } )
-  }
+  // deletePerson(id:number){
+  //   this.dataService.deletePersonData(id,this.currentRoute).subscribe( data => {
+  //     // this.getData();
+  //   } )
+  // }
 
 }

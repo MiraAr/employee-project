@@ -16,8 +16,8 @@ export class DataService {
 
   getDataList(query:string): Observable<Person[]> {
     
-  let username = 'mira';
-  let password = '12345';
+    let username = 'mira';
+    let password = '12345';
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
     return this.httpClient.get<Person[]>(this.baseUrl + query , {headers});
   }

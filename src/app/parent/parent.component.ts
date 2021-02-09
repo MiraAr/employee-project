@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core'
+import { ActivatedRoute } from '@angular/router';
+import { Person } from '../person';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-parent',
@@ -6,13 +9,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-  constructor() {
+  currentRoute:string= this.route.routeConfig.path;  
+  data:Person[];
+
+  constructor(private route: ActivatedRoute, private dataService:DataService) {
   }
   public isViewable: boolean;
+
   ngOnInit(): void {
     this.isViewable = false;
+    this.getData();
   }
+
   public toggleAddForm(): void {
     this.isViewable = !this.isViewable;
   }
+
+  public getData(){
+    this.dataService.getDataList(this.currentRoute)
+    .subscribe((data) => { this.data = data });
+  }
+
+  public deletePerson(personId){
+    this.dataService.deletePersonData(personId,this.currentRoute).subscribe( data => {
+      this.getData();
+    } )
+  }
+
 }

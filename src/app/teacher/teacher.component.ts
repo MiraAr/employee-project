@@ -34,5 +34,4 @@ export class TeacherComponent implements OnInit {
       this.getData();
     } )
   }
-
 }

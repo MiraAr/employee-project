@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { Person } from '../person';
-import { DataService } from '../services/data.service';
 import { ActivatedRoute } from '@angular/router';
 import {
   faTrashAlt
@@ -17,6 +16,7 @@ export class TableComponent implements OnInit {
   @Output() deletePersonEvent:EventEmitter<any> = new EventEmitter<any>();
   currentRoute:string = this.route.routeConfig.path;  
   trashIcon =   faTrashAlt; 
+  
   constructor( private route: ActivatedRoute) {
   }
   
@@ -26,11 +26,5 @@ export class TableComponent implements OnInit {
   deletePerson(id){
     this.deletePersonEvent.emit(id)
   }
-
-  // deletePerson(id:number){
-  //   this.dataService.deletePersonData(id,this.currentRoute).subscribe( data => {
-  //     // this.getData();
-  //   } )
-  // }
 
 }

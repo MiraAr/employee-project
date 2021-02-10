@@ -30,4 +30,9 @@ export class AddFormComponent implements OnInit {
     location.reload() 
   }
 
+  cancelSubmission(){
+    event.preventDefault();
+    location.reload()
+  }
+
 }

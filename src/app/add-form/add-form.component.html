@@ -32,12 +32,16 @@
             </div>
             <div *ngIf = "currentRoute === 'admin'|| currentRoute === 'teacher'" class="inputBox">
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email" [(ngModel)]="person.email" placeholder="Email" #email="ngModel" required>
+                <input type="text" id="email" name="email" [(ngModel)]="person.email" placeholder="Email" #email="ngModel" required email>
                 <div *ngIf="email.invalid && (email.dirty || email.touched)">
                     <div *ngIf="email.errors.required" class="RequiredError">
                         This field is required!
                     </div>
+                    <div class="RequiredError">
+                        Enter a valid email address
+                    </div>
                 </div>
+                
             </div>
             <div class="inputBox">
                 <label for="address">Address:</label>
@@ -80,7 +84,7 @@
             <img [src]="currentRoute === 'admin' ? AdminSrcImage : currentRoute === 'teacher' ? TeacherSrcImage: ParentSrcImage">
             <div class="formBtnContainer">
                 <button type="submit" [disabled]="addForm.invalid">Save</button>    
-                <button  >X Cancel</button>
+                <button (click)="cancelSubmission()">X Cancel</button>
             </div>
             
         </div>

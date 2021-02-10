@@ -19,11 +19,11 @@
             <td>{{ person.firstName }}</td>
             <td>{{ person.lastName }}</td>
             <td>{{ person.phoneNumber }}</td>
-            <td  *ngIf = "currentRoute === 'admin'|| currentRoute === 'teacher'">{{ person.email }}</td>
+            <td  *ngIf = "person.email">{{ person.email }}</td>
             <td>{{ person.address }}</td>
-            <td *ngIf = "currentRoute === 'admin'">{{ person.userName }}</td>
-            <td *ngIf = "currentRoute === 'teacher'">{{ person.classes }}</td>
-            <td *ngIf = "currentRoute === 'teacher'">{{ person.material }}</td>
+            <td *ngIf = "person.userName">{{ person.userName }}</td>
+            <td *ngIf = "person.classes">{{ person.classes }}</td>
+            <td *ngIf = "person.material">{{ person.material }}</td>
             <td><button (click)="deletePerson(person.id)" class="deleteBtn">
                 <fa-icon [icon]="trashIcon" class="trashIcon"></fa-icon>
                 Delete</button></td>

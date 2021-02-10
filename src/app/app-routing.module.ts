@@ -10,10 +10,10 @@ import { AuthGaurdService } from './services/auth-gaurd.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/log-in', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGaurdService]},
-  { path: 'parent', component: ParentComponent ,canActivate:[AuthGaurdService]},
+  { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGaurdService] },
+  { path: 'parent', component: ParentComponent ,canActivate:[AuthGaurdService] },
   { path: 'teacher', component: TeacherComponent, canActivate:[AuthGaurdService] },
-  { path: 'admin', component: AdminComponent , canActivate:[AuthGaurdService]},
+  { path: 'admin', component: AdminComponent , canActivate:[AuthGaurdService] },
   { path: 'contactUs', component: ContactComponent, canActivate:[AuthGaurdService] },
   { path: 'log-in', component: LogInComponent}
 ];

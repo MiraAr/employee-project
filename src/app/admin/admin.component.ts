@@ -29,11 +29,18 @@ export class AdminComponent implements OnInit {
     this.dataService.getDataList(this.currentRoute)
     .subscribe((data) => { this.data = data });
   }
+
+  public AddPerson(personData){
+    this.dataService.createPersonData(personData, this.currentRoute).subscribe(
+      data => { console.log(data) },
+      error => console.log(error)
+    )
+  }
   
   public deletePerson(personId){
     this.dataService.deletePersonData(personId,this.currentRoute).subscribe( data => {
       this.getData();
     } )
-  }
+  }z
 
 }

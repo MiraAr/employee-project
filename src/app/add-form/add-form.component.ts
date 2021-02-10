@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Person } from '../person';
 import { ActivatedRoute } from '@angular/router';
  
@@ -16,10 +15,9 @@ export class AddFormComponent implements OnInit {
   AdminSrcImage:string = "/assets/images/adminAddForm.png";
   ParentSrcImage:string = "/assets/images/parentsAddForm.png";
   TeacherSrcImage:string = "/assets/images/teacherAddForm.png";
-
+  @Output() addNewPersonEvent:EventEmitter<any> = new EventEmitter<any>();
 
   constructor(
-    private dataService: DataService ,
     private route: ActivatedRoute
   ){}
 
@@ -27,15 +25,8 @@ export class AddFormComponent implements OnInit {
 
   }
 
-  saveNewPerson(){
-    this.dataService.createPersonData(this.person, this.currentRoute).subscribe(
-      data => { console.log(data) },
-      error => console.log(error)
-    )
-  }
-
-  formSubmit() {
-    this.saveNewPerson()
+  formSubmit(personData) {
+    this.addNewPersonEvent.emit(personData)
     location.reload() 
   }
 

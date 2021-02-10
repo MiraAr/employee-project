@@ -24,7 +24,7 @@ export class DataService {
 
   createPersonData(person: Person, query:string): Observable<Object>{
     let username = 'mira';
-  let password = '12345';
+    let password = '12345';
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
     return this.httpClient.post<Person[]>(this.baseUrl + query ,person , {headers})
   }

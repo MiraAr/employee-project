@@ -1,3 +1,7 @@
+.formSectionWrapper{
+    height: 90vh;
+}
+
 .formContainer{
     margin: 2% 2%;
     text-align: center;
@@ -71,3 +75,17 @@
         margin-top: 2%;
     }
   }
+  
+/* Validation messages */
+
+.RequiredError{
+    color: red;
+    font-size: 12px;
+    text-align: start;
+    margin: 1%;
+
+}
+
+button:disabled{
+    background-color: #f08678;
+}

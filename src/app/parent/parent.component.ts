@@ -11,7 +11,6 @@ import { DataService } from '../services/data.service';
 export class ParentComponent implements OnInit {
   currentRoute:string= this.route.routeConfig.path;  
   data:Person[];
-
   constructor(private route: ActivatedRoute, private dataService:DataService) {
   }
   public isViewable: boolean;
@@ -28,6 +27,13 @@ export class ParentComponent implements OnInit {
   public getData(){
     this.dataService.getDataList(this.currentRoute)
     .subscribe((data) => { this.data = data });
+  }
+
+  public AddPerson(personData){
+    this.dataService.createPersonData(personData, this.currentRoute).subscribe(
+      data => { console.log(data) },
+      error => console.log(error)
+    )
   }
 
   public deletePerson(personId){

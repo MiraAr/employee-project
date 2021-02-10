@@ -41,6 +41,9 @@ export class AdminComponent implements OnInit {
     this.dataService.deletePersonData(personId,this.currentRoute).subscribe( data => {
       this.getData();
     } )
-  }z
+  }
 
+  public closeForm(){
+    this.isViewable = false;
+  }
 }

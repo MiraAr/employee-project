@@ -4,6 +4,6 @@
     </div>
     <app-table [data]="data" (deletePersonEvent)="deletePerson($event)"></app-table>
     <button (click)="toggleAddForm()" class="addBtn">Add +</button>
-    <app-add-form *ngIf="isViewable" (addNewPersonEvent)="AddPerson($event)"></app-add-form>
+    <app-add-form *ngIf="isViewable" (addNewPersonEvent)="AddPerson($event)" (closeFormEvent)="closeForm()"></app-add-form>
 </div>
 

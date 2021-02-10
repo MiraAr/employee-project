@@ -42,4 +42,8 @@ export class ParentComponent implements OnInit {
     } )
   }
 
+  public closeForm(){
+    this.isViewable = false;
+  }
+
 }

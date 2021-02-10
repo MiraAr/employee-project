@@ -41,4 +41,8 @@ export class TeacherComponent implements OnInit {
       this.getData();
     } )
   }
+
+  public closeForm(){
+    this.isViewable = false;
+  }
 }

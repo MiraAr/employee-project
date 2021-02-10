@@ -16,6 +16,7 @@ export class AddFormComponent implements OnInit {
   ParentSrcImage:string = "/assets/images/parentsAddForm.png";
   TeacherSrcImage:string = "/assets/images/teacherAddForm.png";
   @Output() addNewPersonEvent:EventEmitter<any> = new EventEmitter<any>();
+  @Output() closeFormEvent:EventEmitter<any> = new EventEmitter<any>();
 
   constructor(
     private route: ActivatedRoute
@@ -32,7 +33,7 @@ export class AddFormComponent implements OnInit {
 
   cancelSubmission(){
     event.preventDefault();
-    location.reload()
+    this.closeFormEvent.emit();
   }
 
 }

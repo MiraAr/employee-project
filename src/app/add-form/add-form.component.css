@@ -86,6 +86,6 @@
 
 }
 
-button:disabled{
+.formBtnContainer button[disabled]{
     background-color: #f08678;
 }

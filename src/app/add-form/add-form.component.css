@@ -74,6 +74,10 @@
     .imgAndBtnsContainer{
         margin-top: 2%;
     }
+    
+    .inputBox{
+        margin-top: 1%;
+    }
   }
   
 /* Validation messages */

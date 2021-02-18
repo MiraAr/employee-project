@@ -1,0 +1,20 @@
+*{
+    outline: none;
+}
+
+.navLinks{
+    background-color: #00968B;
+    list-style-type: none;
+    color: white;
+}
+
+.navLinks li{
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.navLinks li:hover{
+    color:#EF5E4A;
+
+}
+

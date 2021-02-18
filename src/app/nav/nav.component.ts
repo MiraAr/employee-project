@@ -22,6 +22,7 @@ export class NavComponent implements OnInit {
   studentIcon = faUserGraduate;
   adminIcon = faUserCog;
   logOutIcon = faSignOutAlt;
+  showSideNav = false;
   constructor( private loginservice: AuthenticationService, private router: Router) {}
 
   ngOnInit(): void {  
@@ -32,4 +33,9 @@ export class NavComponent implements OnInit {
     sessionStorage.clear()
     this.router.navigate(['log-in']);  
   }
+  
+  toggleDisplaySideNav(){
+    this.showSideNav= !this.showSideNav;
+  }
+
 }

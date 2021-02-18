@@ -28,11 +28,10 @@
       <a>Log out</a>
     </li>
 
-    <li id="hamburgerMenu">
+    <li id="hamburgerMenu" (click)="toggleDisplaySideNav()">
       &#9776;
     </li>
- 
 
 </ul>
-   
 </nav>
+<app-sidenav *ngIf="showSideNav" (logOutEvent)="logOut()"></app-sidenav>

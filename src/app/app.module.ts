@@ -16,6 +16,7 @@ import { TableComponent } from './table/table.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { SidenavComponent } from './nav/sidenav/sidenav.component';
 
 @NgModule({
 	declarations: [
@@ -29,7 +30,8 @@ import { FooterComponent } from './footer/footer.component';
     TableComponent,
     AddFormComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    SidenavComponent
 	],
 	imports: [
     BrowserModule,

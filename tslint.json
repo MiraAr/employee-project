@@ -49,7 +49,9 @@
       "info",
       "time",
       "timeEnd",
-      "trace"
+      "trace",
+      "log",
+      "warn"
     ],
     "no-empty": false,
     "no-inferrable-types": [

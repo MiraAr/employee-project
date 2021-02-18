@@ -27,4 +27,8 @@ export class TableComponent implements OnInit {
     this.deletePersonEvent.emit(id)
   }
 
+  trackByFn(index, item){
+    return item.id;
+  }
+
 }

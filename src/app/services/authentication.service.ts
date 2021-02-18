@@ -28,7 +28,7 @@ export class AuthenticationService {
   }
 
   isUserLoggedIn(){
-    let user = sessionStorage.getItem('username')
+    const user = sessionStorage.getItem('username')
     return !(user === null)
   }
 

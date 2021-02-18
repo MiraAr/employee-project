@@ -14,24 +14,23 @@ export class DataService {
   constructor(private httpClient: HttpClient) {}
 
 
-  getDataList(query:string): Observable<Person[]> {
-    
-    let username = 'mira';
-    let password = '12345';
+  getDataList(query:string): Observable<Person[]> {   
+    const username = 'mira';
+    const password = '12345';
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
     return this.httpClient.get<Person[]>(this.baseUrl + query , {headers});
   }
 
   createPersonData(person: Person, query:string): Observable<Object>{
-    let username = 'mira';
-    let password = '12345';
+    const username = 'mira';
+    const password = '12345';
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
     return this.httpClient.post<Person[]>(this.baseUrl + query ,person , {headers})
   }
 
   deletePersonData(id: number,query:string): Observable<Object>{
-    let username = 'mira';
-    let password = '12345';
+    const username = 'mira';
+    const password = '12345';
     const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
     return this.httpClient.delete(`${this.baseUrl+ query}/${id}`,{headers})
   }
